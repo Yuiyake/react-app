@@ -1,10 +1,19 @@
-
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Login from "./pages/Login";
+import Layout from "@/pages/Layout";
 
 function App() {
   return (
-    <div className="App">
-      app
-    </div>
+    //  路由配置
+      <BrowserRouter>
+        <div className="App">
+          <Routes>
+          {/*  创建路由path和组件对应关系  */}
+              <Route path='/' element={<Layout></Layout>}></Route>
+              <Route path='/login' element={<Login></Login>}></Route>
+          </Routes>
+        </div>
+      </BrowserRouter>
   );
 }
 
